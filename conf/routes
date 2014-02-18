@@ -1,0 +1,17 @@
+# Routes
+# This file defines all application routes (Higher priority routes first)
+# ~~~~
+
+# Home page
+GET     /                                    @controllers.Application.index
+GET     /person/:id                          @controllers.Application.person(id: String)
+
+GET     /data/person/:id                     @controllers.Application.hentPerson(id: String)
+GET     /data/person/:id/familier            @controllers.Application.listFamilier(id: String)
+GET     /data/person/:id/sosken              @controllers.Application.listSosken(id: String)
+GET     /data/person/:id/barn                @controllers.Application.listBarn(id: String)
+GET     /data/person/:id/foreldre/:nivaa     @controllers.Application.listForeldre(id: String, nivaa: Integer)
+GET     /data/person/:id/menninger/:nivaa    @controllers.Application.listMenninger(id: String, nivaa: Integer)
+
+# Map static resources from the /public folder to the /assets URL path
+GET     /assets/*file               controllers.Assets.at(path="/public", file)

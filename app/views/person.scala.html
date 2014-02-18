@@ -1,0 +1,26 @@
+@(id: String)
+
+@main("Personside") {
+
+    <script src="@routes.Assets.at("javascripts/person.min.js")" type="text/javascript"></script>
+
+    <h1 id="hovedperson"><span id="pid">@id</span>&nbsp;</h1>
+
+    <h2>Hendelser</h2>
+    <div id="personhendelser"></div>
+
+    <h2>Familier</h2>
+    <div id="familier"></div>
+
+    <h2>Foreldre</h2>
+    <ul id="foreldre"></ul>
+
+    <h2>Søsken</h2>
+    <ul id="sosken"></ul>
+
+    <h2>Søskenbarn</h2>
+    <ul id="soskenbarn"></ul>
+
+    <h2>3-menninger</h2>
+    <ul id="tremenninger"></ul>
+}
