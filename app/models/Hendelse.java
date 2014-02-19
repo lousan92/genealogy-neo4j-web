@@ -9,10 +9,14 @@ public class Hendelse {
 
     public String type;
     public String dato;
+    public String beskrivelse;
+    public String[] notater;
     public String sted;
 
     public Hendelse(Node node) {
         type = node.getProperty("type").toString();
-        dato = node.getProperty("dato").toString();
+        dato = (String) node.getProperty("dato", null);
+        beskrivelse = (String) node.getProperty("beskrivelse", null);
+        notater = (String[]) node.getProperty("notater", null);
     }
 }
